@@ -29,7 +29,7 @@ public:
 
 class SomeExceptionMock : public std::exception {
 public:
-	MOCK_METHOD((const char*), what, (), (const noexcept override));
+	MOCK_METHOD((const char*), what, (), (const, noexcept, override));
 	~SomeExceptionMock() override { Die(); }	// для проверки вызова деструктора
 	MOCK_METHOD((void), Die, ());
 
